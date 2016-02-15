@@ -43,6 +43,7 @@ namespace BlogApp4.Controllers
         public ActionResult Create()
         {
             ViewBag.PostID = new SelectList(db.Posts, "ID", "Title");
+            ViewBag.UserName = User.Identity.Name;
             return View();
         }
 
@@ -56,12 +57,14 @@ namespace BlogApp4.Controllers
         {
             if (ModelState.IsValid)
             {
+                comment.UserName = User.Identity.Name;
                 db.Comments.Add(comment);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
             ViewBag.PostID = new SelectList(db.Posts, "ID", "Title", comment.PostID);
+            ViewBag.UserName = User.Identity.Name;
             return View(comment);
         }
 
@@ -79,6 +82,7 @@ namespace BlogApp4.Controllers
                 return HttpNotFound();
             }
             ViewBag.PostID = new SelectList(db.Posts, "ID", "Title", comment.PostID);
+            comment.UserName = User.Identity.Name;
             return View(comment);
         }
 
@@ -92,11 +96,13 @@ namespace BlogApp4.Controllers
         {
             if (ModelState.IsValid)
             {
+                comment.UserName = User.Identity.Name;
                 db.Entry(comment).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
             ViewBag.PostID = new SelectList(db.Posts, "ID", "Title", comment.PostID);
+            comment.UserName = User.Identity.Name;
             return View(comment);
         }
 

@@ -188,6 +188,18 @@
     <Compile Include="Migrations\201602140421568_InitialCreate.Designer.cs">
       <DependentUpon>201602140421568_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602150340014_userName.cs" />
+    <Compile Include="Migrations\201602150340014_userName.Designer.cs">
+      <DependentUpon>201602150340014_userName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602150348264_UserN.cs" />
+    <Compile Include="Migrations\201602150348264_UserN.Designer.cs">
+      <DependentUpon>201602150348264_UserN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602150350511_Userna.cs" />
+    <Compile Include="Migrations\201602150350511_Userna.Designer.cs">
+      <DependentUpon>201602150350511_Userna.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Comment.cs" />
@@ -277,6 +289,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201602140421568_InitialCreate.resx">
       <DependentUpon>201602140421568_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602150340014_userName.resx">
+      <DependentUpon>201602150340014_userName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602150348264_UserN.resx">
+      <DependentUpon>201602150348264_UserN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602150350511_Userna.resx">
+      <DependentUpon>201602150350511_Userna.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

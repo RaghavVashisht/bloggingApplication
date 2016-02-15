@@ -60,3 +60,6 @@ c:\users\raghav\documents\visual studio 2013\Projects\BlogApp4\BlogApp4\bin\Send
 c:\users\raghav\documents\visual studio 2013\Projects\BlogApp4\BlogApp4\bin\SendGridMail.dll
 c:\users\raghav\documents\visual studio 2013\Projects\BlogApp4\BlogApp4\bin\System.Net.Http.Formatting.dll
 c:\users\raghav\documents\visual studio 2013\Projects\BlogApp4\BlogApp4\bin\System.Net.Http.Formatting.xml
+C:\Users\Raghav\documents\visual studio 2013\Projects\BlogApp4\BlogApp4\obj\Debug\BlogApp4.Migrations.userName.resources
+C:\Users\Raghav\documents\visual studio 2013\Projects\BlogApp4\BlogApp4\obj\Debug\BlogApp4.Migrations.UserN.resources
+C:\Users\Raghav\documents\visual studio 2013\Projects\BlogApp4\BlogApp4\obj\Debug\BlogApp4.Migrations.Userna.resources
