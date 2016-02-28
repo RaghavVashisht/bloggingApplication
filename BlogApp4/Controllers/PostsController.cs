@@ -18,7 +18,9 @@ namespace BlogApp4.Controllers
         [AllowAnonymous]
         public ActionResult Index()
         {
-            return View(db.Posts.ToList());
+            var postsList = db.Posts.ToList();
+            postsList.Reverse();
+            return View(postsList);
         }
 
         // GET: Posts/Details/5
