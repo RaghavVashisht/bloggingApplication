@@ -14,6 +14,7 @@ namespace BlogApp4.Models
         public string Title { get; set; }
         [Required]
         [Display(Name = "Body")]
+        [DataType(DataType.MultilineText)]
         public string Body { get; set; }
     }
 }
