@@ -18,13 +18,17 @@
 
         <dd>
             <p style="white-space: pre-line">@Html.DisplayFor(model => model.Body)</p>
+            <br />
+            <br />
+            <div class="fb-like" data-href="https://www.facebook.com/bloggingApplication/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+            <div class="fb-comments" data-href="https://www.facebook.com/bloggingApplication/" data-numposts="5"></div>
+            
         </dd>
 
     </dl>
 </div>
 <p>
-    <div class="fb-comments" data-href="https://www.facebook.com/bloggingApplication/" data-numposts="5"></div>
-    <div class="fb-like" data-href="https://www.facebook.com/bloggingApplication/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+    <!--<div class="fb-comments" data-href="https://www.facebook.com/bloggingApplication/" data-numposts="5"></div> -->
     @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
