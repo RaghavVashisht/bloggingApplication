@@ -7,7 +7,16 @@
 <h2>Blogs</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @if (User.Identity.IsAuthenticated)
+    {
+        @Html.ActionLink("Create New", "Create")
+    }
+    else
+    {
+        <p>
+            @Html.ActionLink("Log in", "Create") to create a new post 
+        </p>        
+    }
 </p>
 <table class="table">
     <tr>

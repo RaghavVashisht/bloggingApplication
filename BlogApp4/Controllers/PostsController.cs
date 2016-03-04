@@ -44,6 +44,7 @@ namespace BlogApp4.Controllers
         public ActionResult Create()
         {
             return View();
+            ViewBag.User_Name = User.Identity.Name;
         }
 
         // POST: Posts/Create
@@ -56,11 +57,12 @@ namespace BlogApp4.Controllers
         {
             if (ModelState.IsValid)
             {
+                post.User_Name = User.Identity.Name;
                 db.Posts.Add(post);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
+            ViewBag.User_Name = User.Identity.Name;
             return View(post);
         }
 
@@ -77,6 +79,7 @@ namespace BlogApp4.Controllers
             {
                 return HttpNotFound();
             }
+            post.User_Name = User.Identity.Name;
             return View(post);
         }
 
@@ -90,6 +93,7 @@ namespace BlogApp4.Controllers
         {
             if (ModelState.IsValid)
             {
+                post.User_Name = User.Identity.Name;
                 db.Entry(post).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

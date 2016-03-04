@@ -63,3 +63,4 @@ c:\users\raghav\documents\visual studio 2013\Projects\BlogApp4\BlogApp4\bin\Syst
 C:\Users\Raghav\documents\visual studio 2013\Projects\BlogApp4\BlogApp4\obj\Debug\BlogApp4.Migrations.userName.resources
 C:\Users\Raghav\documents\visual studio 2013\Projects\BlogApp4\BlogApp4\obj\Debug\BlogApp4.Migrations.UserN.resources
 C:\Users\Raghav\documents\visual studio 2013\Projects\BlogApp4\BlogApp4\obj\Debug\BlogApp4.Migrations.Userna.resources
+C:\Users\Raghav\documents\visual studio 2013\Projects\BlogApp4\BlogApp4\obj\Debug\BlogApp4.Migrations.Uesr_Name_Post.resources
