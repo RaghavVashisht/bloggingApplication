@@ -14,6 +14,7 @@ namespace BlogApp4.Controllers
             return View();
         }
 
+        [AllowAnonymous]
         public ActionResult About()
         {
             ViewBag.Message = "This is a very simple Blogging application";
@@ -21,6 +22,7 @@ namespace BlogApp4.Controllers
             return View();
         }
 
+        [AllowAnonymous]
         public ActionResult Contact()
         {
             ViewBag.Message = "Raghav Vashisht";
