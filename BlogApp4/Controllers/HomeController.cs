@@ -17,7 +17,7 @@ namespace BlogApp4.Controllers
         [AllowAnonymous]
         public ActionResult About()
         {
-            ViewBag.Message = "This is a very simple Blogging application";
+            ViewBag.Message = "Welcome to FreeSpace community!";
 
             return View();
         }

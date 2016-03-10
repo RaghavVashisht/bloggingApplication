@@ -4,55 +4,87 @@
     ViewBag.Title = "Blogs";
 }
 
-<h2>Blogs</h2>
+<div id="masthead">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h1>
+                    Blog
+                    <p class="lead">Catchy Subtitle Here</p>
+                </h1>
+            </div>
+            <div class="col-md-5">
+                <div class="well well-lg">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    @Html.ActionLink("Create New", "Create")
+                                }
+                                else
+                                {
+                                <p>
+                                    @Html.ActionLink("Log in", "Create") to create a new post
+                                </p>
+                                }
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
 
-<p>
-    @if (User.Identity.IsAuthenticated)
-    {
-        @Html.ActionLink("Create New", "Create")
-    }
-    else
-    {
-        <p>
-            @Html.ActionLink("Log in", "Create") to create a new post 
-        </p>        
-    }
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Body)
-        </th>
-        <th></th>
-    </tr>
+        <div class="col-md-12">
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.ActionLink(item.Title, "Details", new { id = item.ID })
-            @* @Html.DisplayFor(modelItem => item.Title) *@
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Body)
-        </td>
-        <td>
-            @if (User.Identity.IsAuthenticated)
-            {
-                if (User.Identity.Name.Equals(item.User_Name))
-                {
-                    <a href="@Url.Action("Edit", new { id = item.ID })">
-                        <img src="@Url.Content("~/Content/img/edit.jpg")" width="15" height="15" title="Edit" />
-                    </a>
-                    <a href="@Url.Action("Delete", new { id = item.ID })">
-                        <img src="@Url.Content("~/Content/img/delete2.jpg")" width="15" height="15" title="Delete" />
-                    </a>
-                }
-            }
-        </td>
-    </tr>
-}
+            <div class="panel">
+                <div class="panel-body">
+                    @foreach (var item in Model)
+                    {
 
-</table>
+                        <!--/stories-->
+                        <div class="row">
+                            <br>
+                            <div class="col-md-2 col-sm-3 text-center">
+                                <a class="story-img" href="#"><img src="~/Content/img/galaxy.jpg" style="width:100px;height:100px" class="img-circle"></a>
+                            </div>
+                            <div class="col-md-10 col-sm-9">
+                                <h3>
+                                    @Html.ActionLink(item.Title, "Details", new { id = item.ID })
+                                    @* @Html.DisplayFor(modelItem => item.Title) *@
+                                </h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-9">
+                                    <p>
+                                        @Html.DisplayFor(modelItem => item.Body)
+                                    </p>
+                                    <p class="lead">
+                                        <button class="btn btn-default">@Html.ActionLink("Read More", "Details", new { id = item.ID })</button>
+                                    </p>
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        if (User.Identity.Name.Equals(item.User_Name))
+                                        {
+                                            <p class="pull-right">
+                                                <span class="label label-default" id="blog-edit"><a href="@Url.Action("Edit", new { id = item.ID })">Edit</a></span>
+                                                <span class="label label-default" id="blog-delete"><a href="@Url.Action("Delete", new { id = item.ID })">Delete</a></span>
+                                            </p>
+
+                                        }
+                                    }
+                                    <ul class="list-inline"><li><a href="#">2 Days Ago</a></li><li><a href="#"><i class="glyphicon glyphicon-comment"></i> 4 Comments</a></li><li><a href="#"><i class="glyphicon glyphicon-share"></i> 34 Shares</a></li></ul>
+                                </div>
+                                <div class="col-xs-3"></div>
+                            </div>
+                            <br><br>
+                        </div>
+                        <hr>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
