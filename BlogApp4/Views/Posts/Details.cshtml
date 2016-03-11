@@ -4,9 +4,12 @@
     ViewBag.Title = "Details";
 }
 
-<div style="text-align: center">
-    <h1>@Html.DisplayFor(model => model.Title)</h1>
-    <p><i>by @Html.DisplayFor(model => model.User_Name)</i></p>
+<div style="text-align:center">
+    @*<h1>@Html.DisplayFor(model => model.Title)</h1>*@
+    <p style="font-size:300%; font-weight:300">
+        @Html.DisplayFor(model => model.Title)
+    </p>
+<p><i>by @Html.DisplayFor(model => model.User_Name)</i></p>
     @if (User.Identity.IsAuthenticated)
     {
         if (User.Identity.Name.Equals(Model.User_Name))
