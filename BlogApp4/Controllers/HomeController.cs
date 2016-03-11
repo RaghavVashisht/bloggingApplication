@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlogApp4.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,13 @@ namespace BlogApp4.Controllers
 {
     public class HomeController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
         [AllowAnonymous]
         public ActionResult Index()
         {
-            return View();
+            var postsList = db.Posts.ToList();
+            postsList.Reverse();
+            return View("../Posts/index", postsList);
         }
 
         [AllowAnonymous]

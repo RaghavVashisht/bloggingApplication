@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -204,6 +205,10 @@
     <Compile Include="Migrations\201603032248112_Uesr_Name_Post.Designer.cs">
       <DependentUpon>201603032248112_Uesr_Name_Post.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603110043472_bodySummary.cs" />
+    <Compile Include="Migrations\201603110043472_bodySummary.Designer.cs">
+      <DependentUpon>201603110043472_bodySummary.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Comment.cs" />
@@ -216,6 +221,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\blog-logo.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -305,6 +311,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603032248112_Uesr_Name_Post.resx">
       <DependentUpon>201603032248112_Uesr_Name_Post.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603110043472_bodySummary.resx">
+      <DependentUpon>201603110043472_bodySummary.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

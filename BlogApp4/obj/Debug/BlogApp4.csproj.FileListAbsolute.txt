@@ -130,3 +130,4 @@ C:\RV_Files\blogApp\bloggingApplication\BlogApp4\obj\Debug\BlogApp4.Migrations.U
 C:\RV_Files\blogApp\bloggingApplication\BlogApp4\obj\Debug\BlogApp4.csproj.GenerateResource.Cache
 C:\RV_Files\blogApp\bloggingApplication\BlogApp4\obj\Debug\BlogApp4.dll
 C:\RV_Files\blogApp\bloggingApplication\BlogApp4\obj\Debug\BlogApp4.pdb
+C:\RV_Files\blogApp\bloggingApplication\BlogApp4\obj\Debug\BlogApp4.Migrations.bodySummary.resources

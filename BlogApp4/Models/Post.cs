@@ -17,5 +17,6 @@ namespace BlogApp4.Models
         [DataType(DataType.MultilineText)]
         public string Body { get; set; }
         public string User_Name { get; set; }
+        public string Body_Summary { get; set; }
     }
 }

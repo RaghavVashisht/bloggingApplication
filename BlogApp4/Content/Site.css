@@ -6,6 +6,7 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    font-family: "Dosis"; 
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -81,6 +82,9 @@ a,a:hover {
 @media screen and (min-width: 768px) {
   #masthead h1 {
     font-size: 80px;
+    color:#424242;
+    font-family: "Dosis"; 
+    letter-spacing: 7px;
   }
 }
 
@@ -116,7 +120,7 @@ a,a:hover {
 
 .panel .lead {
   overflow:hidden;
-  height:90px;
+  height:40px;
 }
 
 .label-float{
@@ -154,4 +158,29 @@ a,a:hover {
     color:red;
 }
 
+.blog-entry {
+    line-height: 1.35em;
+    font-size: 1.25em;
+    color:#424242;
+    word-wrap: break-word;
+    font-family: "Dosis"; 
+    text-align: justify;
+    font-weight: 600;
+}
 
+.blog-spcl-font {
+    line-height: 1.35em;
+    font-size: 1.25em;
+    color:#424242;
+    font-family: "Dosis"; 
+}
+
+.blog-logo {
+    color:#5fc6f4;
+}
+
+.blog-create-new {
+    background:#5fc6f4;
+    padding: 10px 25px;
+    font-weight: 800;
+}

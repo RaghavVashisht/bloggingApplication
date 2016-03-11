@@ -58,6 +58,8 @@ namespace BlogApp4.Controllers
             if (ModelState.IsValid)
             {
                 post.User_Name = User.Identity.Name;
+                post.Body_Summary = post.Body.Substring(0, 700);
+                post.Body_Summary += "...";
                 db.Posts.Add(post);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -94,6 +96,8 @@ namespace BlogApp4.Controllers
             if (ModelState.IsValid)
             {
                 post.User_Name = User.Identity.Name;
+                post.Body_Summary = post.Body.Substring(0, 700);
+                post.Body_Summary += "...";
                 db.Entry(post).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

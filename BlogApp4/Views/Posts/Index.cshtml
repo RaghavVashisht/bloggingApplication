@@ -9,26 +9,23 @@
         <div class="row">
             <div class="col-md-7">
                 <h1>
-                    Blog
-                    <p class="lead">Catchy Subtitle Here</p>
+                    FreeSpace
+                    <p class="lead">Welcome to FreeSpace, where thoughts turn into blogs</p>
                 </h1>
             </div>
             <div class="col-md-5">
-                <div class="well well-lg">
+                <div class="">
                     <div class="row">
-                        <div class="col-sm-12">
-                            <p>
+                        <div class="col-sm-7 col-sm-offset-3 blog-create-new blog-spcl-font">
+                            <i class="fa fa-3x fa-rocket"></i>
                                 @if (User.Identity.IsAuthenticated)
                                 {
-                                    @Html.ActionLink("Create New", "Create")
+                                    @Html.ActionLink("Create New", "Create", "Posts")
                                 }
                                 else
                                 {
-                                <p>
-                                    @Html.ActionLink("Log in", "Create") to create a new post
-                                </p>
+                                    @Html.ActionLink("Log in to start blogging", "Create", "Posts")
                                 }
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -49,34 +46,34 @@
                         <div class="row">
                             <br>
                             <div class="col-md-2 col-sm-3 text-center">
-                                <a class="story-img" href="#"><img src="~/Content/img/galaxy.jpg" style="width:100px;height:100px" class="img-circle"></a>
+                                <a class="story-img" href="#"><img src="~/Content/img/blog-logo.jpg" style="width:130px;height:100px" class="img-circle"></a>
                             </div>
                             <div class="col-md-10 col-sm-9">
                                 <h3>
-                                    @Html.ActionLink(item.Title, "Details", new { id = item.ID })
-                                    @* @Html.DisplayFor(modelItem => item.Title) *@
-                                </h3>
+                                    <a href="@Url.Action("Details","Posts", new { id = item.ID })">@item.Title</a>
+                                       @* @Html.DisplayFor(modelItem=>item.Title) *@</h3>
                             </div>
                             <div class="row">
                                 <div class="col-xs-9">
                                     <p>
-                                        @Html.DisplayFor(modelItem => item.Body)
+                                        @Html.DisplayFor(modelItem => item.Body_Summary)
                                     </p>
                                     <p class="lead">
-                                        <button class="btn btn-default">@Html.ActionLink("Read More", "Details", new { id = item.ID })</button>
+                                        <button class="btn btn-default"><a href="@Url.Action("Details", "Posts", new { id = item.ID })">Read More</a></button>
                                     </p>
                                     @if (User.Identity.IsAuthenticated)
                                     {
                                         if (User.Identity.Name.Equals(item.User_Name))
                                         {
                                             <p class="pull-right">
-                                                <span class="label label-default" id="blog-edit"><a href="@Url.Action("Edit", new { id = item.ID })">Edit</a></span>
-                                                <span class="label label-default" id="blog-delete"><a href="@Url.Action("Delete", new { id = item.ID })">Delete</a></span>
+                                                <span class="label label-default" id="blog-edit"><a href="@Url.Action("Edit", "Posts", new { id = item.ID })">Edit</a></span>
+                                                <span class="label label-default" id="blog-delete"><a href="@Url.Action("Delete", "Posts", new { id = item.ID })">Delete</a></span>
                                             </p>
 
                                         }
                                     }
-                                    <ul class="list-inline"><li><a href="#">2 Days Ago</a></li><li><a href="#"><i class="glyphicon glyphicon-comment"></i> 4 Comments</a></li><li><a href="#"><i class="glyphicon glyphicon-share"></i> 34 Shares</a></li></ul>
+                                    @*<ul class="list-inline"><li><a href="#">2 Days Ago</a></li><li><a href="#"><i class="glyphicon glyphicon-comment"></i> 4 Comments</a></li><li><a href="#"><i class="glyphicon glyphicon-share"></i> 34 Shares</a></li></ul>*@
+                                    
                                 </div>
                                 <div class="col-xs-3"></div>
                             </div>
